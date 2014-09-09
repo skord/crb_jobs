@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.1.1'
+
 gem 'bitters'
 gem 'bourbon'
 gem 'coffee-rails', '~> 4.0.0'
@@ -19,6 +21,7 @@ gem 'slim'
 gem 'spring',        group: :development
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
+gem 'rails_12factor'
 
 group :development, :test do
   gem 'rspec-rails'
