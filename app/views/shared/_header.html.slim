@@ -1,0 +1,22 @@
+header.navigation
+  .navigation-wrapper
+    a.logo href="javascript:void(0)"
+      img alt="" src="http://img3.wikia.nocookie.net/__cb20120813052521/battlefordreamisland/images/5/5e/Ruby_Icon.png"
+
+    a#js-mobile-menu.navigation-menu-button href=""  MENU
+    .nav
+      ul#navigation-menu
+        li.nav-link
+          a href="http://columbusrb.com" Columbus Ruby Brigade
+        li.nav-link
+          a href="http://jobs.columbusrb.com" All Jobs
+        li.nav-link
+          a href="http://jobs.columbusrb.com/jobs/new" Post Job
+
+    .navigation-tools
+      .search-bar
+        .search-and-submit
+          input placeholder=("Enter Search") type="search" value="#{params[:term]}"
+          button type="submit"
+            img alt="" src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/search-icon.png"
+

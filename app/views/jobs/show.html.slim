@@ -1,0 +1,28 @@
+p
+  h1= @job.title
+
+#details
+  p
+    label Company
+    = link_to @job.company_name, @job.company_url
+  p
+    label Experience Level
+    = @job.experience_level
+  p
+    label Still Open?
+    = boolean_answer(@job.is_open)
+  p
+    label Position Type
+    = @job.position_type
+  p
+    label Remote Potential?
+    = boolean_answer(@job.remote_potential)
+  p
+    label Location
+    = @job.location
+  p
+    label Contact
+    = mail_to @job.email, @job.email
+
+#description
+  = @job.description

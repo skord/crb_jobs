@@ -1,0 +1,51 @@
+@import "bourbon";
+@import "neat";
+@import "bitters/grid-settings";
+@import "bitters/bitters";
+@import "header";
+
+.container {
+  @include outer-container;
+}
+
+#header {
+  @include span-columns(12);
+  margin-bottom: 0.1em;
+  text-align: center;
+  font-size: 14em;
+  line-height: 300px;
+
+  span.crb {
+    color: #C10C21
+  }
+}
+
+#details {
+  @include span-columns(4);
+
+  p {
+    margin-bottom: 2em;
+  }
+
+  label {
+    line-height: 0.75em;
+  }
+}
+
+#description {
+  @include span-columns(8);
+  white-space: pre-wrap;
+}
+
+input[type="checkbox"] + label {
+  display: inline-block;
+}
+
+.pagination {
+  margin: 2em 0;
+  text-align: center;
+
+  span.page, span.next, span.last {
+    padding: 1em;
+  }
+}

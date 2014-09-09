@@ -1,0 +1,18 @@
+h1 Post a Job
+
+= simple_form_for @job do |f|
+  #details
+    = f.input :title
+    = f.input :location
+    = f.input :company_name
+    = f.input :company_url
+    = f.input :email, label: "Contact Email"
+    = f.input :experience_level, as: :select, collection: Job::LEVELS
+    = f.input :position_type, as: :select, collection: Job::POSITION_TYPES
+
+  #description
+    = f.input :description, input_html: {rows: 25}
+    p= f.input :remote_potential, as: :boolean, label: "Open to remote workers?"
+
+    = f.submit
+
