@@ -22,6 +22,7 @@ gem 'spring',        group: :development
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 gem 'rails_12factor'
+gem 'thin'
 
 group :development, :test do
   gem 'rspec-rails'
