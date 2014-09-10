@@ -1,7 +1,5 @@
 source 'https://rubygems.org'
 
-ruby '2.0.0'
-
 gem 'bitters'
 gem 'bourbon'
 gem 'coffee-rails', '~> 4.0.0'
