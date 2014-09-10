@@ -19,3 +19,12 @@ test:
   reconnect: true
 
 production:
+  adapter: postgresql
+  database: crb_jobs
+  username: crb
+  password:
+  host: localhost
+  pool: 20
+  wait_timeout: 20
+  reconnect: true
+

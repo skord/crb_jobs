@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.1.1'
+ruby '2.0.0'
 
 gem 'bitters'
 gem 'bourbon'
@@ -28,6 +28,7 @@ gem 'sinatra', '>= 1.3.0', :require => nil
 group :development, :test do
   gem 'rspec-rails'
   gem 'capybara-rails'
+  gem 'capistrano'
 end
 
 group :production do
