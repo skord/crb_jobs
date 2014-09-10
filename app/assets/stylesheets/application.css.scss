@@ -4,6 +4,10 @@
 @import "bitters/bitters";
 @import "header";
 
+h1 {
+  margin-bottom: 1em;
+}
+
 .container {
   @include outer-container;
 }

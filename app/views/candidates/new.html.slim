@@ -1,0 +1,15 @@
+h1 Looking For A Job?
+
+= simple_form_for @candidate do |f|
+  #details
+    = f.input :first_name
+    = f.input :last_name
+    = f.input :email
+    = f.input :github_name
+    = f.input :twitter_name
+    = f.input :experience_level, as: :select, collection: Job::LEVELS
+  #description
+    = f.input :about_me, input_html: {rows: 10}
+    = f.input :looking_for, input_html: {rows: 10}
+    p= f.input :receive_updates, default: true
+    = f.submit

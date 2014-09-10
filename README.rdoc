@@ -1,6 +1,6 @@
 ## Ideas
 
-* Sign up for alerts
+* Delete Candidate from unsubscribe
 * Markdown descriptions
 * Allow closing of jobs
 * Fine-grained search

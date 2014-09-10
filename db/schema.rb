@@ -11,10 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140909202356) do
+ActiveRecord::Schema.define(version: 20140910024930) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "candidates", force: true do |t|
+    t.string  "first_name"
+    t.string  "last_name"
+    t.string  "email"
+    t.text    "about_me"
+    t.string  "experience_level"
+    t.string  "github_name"
+    t.string  "twitter_name"
+    t.text    "looking_for"
+    t.boolean "receive_updates",  default: true
+    t.string  "token"
+  end
+
+  add_index "candidates", ["receive_updates"], name: "index_candidates_on_receive_updates", using: :btree
+  add_index "candidates", ["token"], name: "index_candidates_on_token", using: :btree
 
   create_table "jobs", force: true do |t|
     t.string   "title"

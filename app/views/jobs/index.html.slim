@@ -7,7 +7,6 @@ table
       th Position Type
       th Experience Level
       th Remote?
-      th Still Open?
       th Posted
 
   - @jobs.each do |j|
@@ -18,7 +17,6 @@ table
       td= j.position_type
       td= j.experience_level
       td= boolean_answer(j.remote_potential)
-      td= boolean_answer(j.is_open)
       td= "#{distance_of_time_in_words(j.created_at, Time.now)} ago"
 
 = paginate @jobs

@@ -21,10 +21,15 @@ gem 'slim'
 gem 'spring',        group: :development
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
-gem 'rails_12factor'
 gem 'thin'
+gem 'sidekiq'
+gem 'sinatra', '>= 1.3.0', :require => nil
 
 group :development, :test do
   gem 'rspec-rails'
   gem 'capybara-rails'
+end
+
+group :production do
+  gem 'rails_12factor'
 end

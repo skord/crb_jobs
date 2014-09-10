@@ -1,0 +1,18 @@
+h1 Looking to Hire?
+
+table
+  thead
+    tr
+      th Name
+      th Experience Level
+      th Github
+      th Twitter
+
+  - @candidates.each do |c|
+    tr
+      td= link_to c.name, candidate_path(c)
+      td= c.experience_level
+      td= link_to c.github_name, "http://github.com/#{c.github_name}"
+      td= link_to c.twitter_name, "http://twitter.com/#{c.twitter_name}".gsub('@', '')
+
+= paginate @candidates

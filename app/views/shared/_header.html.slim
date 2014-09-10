@@ -8,10 +8,10 @@ header.navigation
       ul#navigation-menu
         li.nav-link
           a href="http://columbusrb.com" Columbus Ruby Brigade
-        li.nav-link
-          a href="http://jobs.columbusrb.com" All Jobs
-        li.nav-link
-          a href="http://jobs.columbusrb.com/jobs/new" Post Job
+        li.nav-link= link_to "All Jobs", jobs_path
+        li.nav-link= link_to "Post Job", new_job_path
+        li.nav-link= link_to "Looking for a Job?", new_candidate_path
+        li.nav-link= link_to "Looking to Hire?", candidates_path
 
     .navigation-tools
       .search-bar

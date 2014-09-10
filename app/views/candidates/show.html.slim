@@ -1,0 +1,24 @@
+p
+  h1= @candidate.name
+
+#details
+  p
+    label Email
+    = mail_to @candidate.email, @candidate.email
+  p
+    label Experience Level
+    = @candidate.experience_level
+  p
+    label Github
+    = link_to @candidate.github_name, "http://github.com/#{@candidate.github_name}"
+  p
+    label Twitter
+    = link_to @candidate.twitter_name, "http://twitter.com/#{@candidate.twitter_name}".gsub('@', '')
+
+#description
+  p
+    label About Me
+    = @candidate.about_me
+  p
+    label What I'm looking for
+    = @candidate.looking_for

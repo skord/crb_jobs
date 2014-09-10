@@ -20,3 +20,16 @@ Curabitur eget sagittis tellus, in posuere nulla. Integer semper ipsum non augue
 end
 
 Job.reindex
+
+50.times do |x|
+  Candidate.create({
+    first_name: "Joe_#{x}",
+    last_name: "Schmoe_#{x}",
+    email: "joe@schmoe_#{x}.com",
+    about_me: lorem,
+    experience_level: Job::LEVELS.sample,
+    github_name: "schmoe_#{x}",
+    twitter_name: "@joe#{x}",
+    looking_for: lorem
+  })
+end
