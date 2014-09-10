@@ -22,7 +22,7 @@ production:
   adapter: postgresql
   database: crb_jobs
   username: crb
-  password:
+  password: justwork
   host: localhost
   pool: 20
   wait_timeout: 20
