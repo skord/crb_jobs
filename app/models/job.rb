@@ -8,8 +8,6 @@ class Job < ActiveRecord::Base
 
   default_scope { where( is_open: true ) }
 
-  belongs_to :company
-
   validate :title, :location, :email, :remote_potential, :experience_level,
     :position_type, presence: true
 
