@@ -141,6 +141,7 @@ GEM
       thor (>= 0.18.1, < 2.0)
     raindrops (0.13.0)
     rake (10.3.2)
+    rb-readline (0.5.1)
     redis (3.0.7)
     redis-namespace (1.4.1)
       redis (~> 3.0.4)
@@ -238,6 +239,7 @@ DEPENDENCIES
   quiet_assets
   rails (= 4.1.4)
   rails_12factor
+  rb-readline
   rspec-rails
   sass-rails (~> 4.0.3)
   searchkick
