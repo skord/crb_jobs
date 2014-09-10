@@ -22,6 +22,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'unicorn'
 gem 'sidekiq'
 gem 'sinatra', '>= 1.3.0', :require => nil
+gem 'rails_12factor'
 
 group :development, :test do
   gem 'rspec-rails'
