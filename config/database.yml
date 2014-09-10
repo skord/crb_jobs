@@ -20,10 +20,11 @@ test:
 
 production:
   adapter: postgresql
-  database: crb_jobs
-  username: crb
-  password: justwork
-  host: localhost
+  database: db
+  username: root
+  password: 7UTOtz9xe9emmuw7
+  host: 172.17.42.1
+  port: 49155
   pool: 20
   wait_timeout: 20
   reconnect: true
