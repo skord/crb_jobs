@@ -1,5 +1,8 @@
 class Candidate < ActiveRecord::Base
 
+  searchkick
+  paginates_per 10
+
   before_create :generate_token!
 
   scope :emailable, -> { where( receive_updates: true ) }

@@ -12,7 +12,7 @@ table
   - @jobs.each do |j|
     tr
       td= link_to j.title, job_path(j)
-      td= link_to j.company_name, j.company_url
+      td= link_to j.company_name, j.url
       td= j.location
       td= j.position_type
       td= j.experience_level

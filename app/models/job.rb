@@ -1,10 +1,12 @@
 class Job < ActiveRecord::Base
 
+  searchkick
+  paginates_per 10
+
   LEVELS         = %w{Entry\ Level Junior Intermediate Senior PM}
   POSITION_TYPES = %W{Full\ Time Part\ Time Apprentice Intern}
 
-  searchkick
-  paginates_per 10
+  after_commit :send_emails
 
   default_scope { where( is_open: true ) }
 

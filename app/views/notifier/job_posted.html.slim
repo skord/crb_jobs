@@ -4,7 +4,7 @@ p
 #details
   p
     label Company
-    = @job.company_name
+    = link_to @job.company_name, @job.url
   p
     label Experience Level
     = @job.experience_level

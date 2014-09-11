@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140910024930) do
+ActiveRecord::Schema.define(version: 20140911024240) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(version: 20140910024930) do
     t.string   "location"
     t.boolean  "remote_potential"
     t.string   "company_name"
-    t.string   "company_url"
+    t.string   "url"
   end
 
   add_index "jobs", ["is_open"], name: "index_jobs_on_is_open", using: :btree

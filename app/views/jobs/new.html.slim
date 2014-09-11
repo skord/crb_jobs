@@ -5,7 +5,7 @@ h1 Post a Job
     = f.input :title
     = f.input :location
     = f.input :company_name
-    = f.input :company_url
+    = f.input :url, label: "Company Website"
     = f.input :email, label: "Contact Email"
     = f.input :experience_level, as: :select, collection: Job::LEVELS
     = f.input :position_type, as: :select, collection: Job::POSITION_TYPES
