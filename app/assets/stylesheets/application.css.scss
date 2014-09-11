@@ -8,6 +8,10 @@ h1 {
   margin-bottom: 1em;
 }
 
+select {
+  width: 100%;
+}
+
 .container {
   @include outer-container;
 }
