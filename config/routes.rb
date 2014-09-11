@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   end
 
   get '/unsubscribe/:token', to: 'candidates#unsubscribe', as: 'unsubscribe'
+  get '/remove_account/:token', to: 'candidates#destroy', as: 'remove_account'
 
   root to: "jobs#index"
 

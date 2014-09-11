@@ -1,5 +1,5 @@
 $ ->
-  $('.search-bar input[type="search"]').on 'keypress', (e) -> search() if e.keyCode is 13
+  $('.search-bar input[type="search"]').on 'keyup', (e) -> search() if e.keyCode is 13
   $('.search-bar button[type="submit"]').on 'click', -> search()
 
 search = ->

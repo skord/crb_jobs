@@ -5,6 +5,11 @@ class CandidatesController < InheritedResources::Base
     Candidate.where(token: params[:token]).first.update_attribute(:receive_updates, false)
   end
 
+  def destroy
+    Candidate.where(token: params[:token]).first.destroy
+    redirect_to root_path
+  end
+
   private
 
   def permitted_params
