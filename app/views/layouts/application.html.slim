@@ -4,13 +4,38 @@ html
     title CRB Jobs
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = javascript_include_tag "//use.typekit.net/yye7dwz.js"
     = csrf_meta_tags
+
+    javascript:
+      $(function(){
+        $('#bigtext').hide();
+      });
+
+      try {
+        Typekit.load({
+          active: function() {
+            if (jQuery.support.opacity) {
+              $('#bigtext').fadeIn();
+            } else {
+              $('#bigtext').show();
+            }
+
+            /*$('#bigtext').bigtext();*/
+          },
+          inactive: function() {
+            $('#bigtext').show();
+            console.log('inactive');
+          }
+        });
+      } catch(e) {}
 
   body
     = render partial: "shared/header"
 
     #header
-      span.crb CRB
-      span JOBS
+      #bigtext
+        .font.crb CRB
+        .font JOBS
 
     .container= yield

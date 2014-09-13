@@ -15,7 +15,7 @@ Curabitur eget sagittis tellus, in posuere nulla. Integer semper ipsum non augue
     remote_potential: [true, false].sample,
     title: "Job #{x}",
     company_name: "Company #{x}",
-    company_url: "http://asdf.com"
+    url: "http://asdf.com"
   })
 end
 

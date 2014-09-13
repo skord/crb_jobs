@@ -1,0 +1,13 @@
+- if @jobs.present? || @candidates.present?
+  h1= "Looking for \"#{@term}\""
+
+  - if @jobs.present?
+    h2= "Jobs (#{@jobs.count})"
+    = render "jobs/table"
+
+  - if @candidates.present?
+    h2= "Candidates (#{@candidates.count})"
+    = render "candidates/table"
+
+- else
+  h1= "Sorry; nothing for \"#{@term}\""

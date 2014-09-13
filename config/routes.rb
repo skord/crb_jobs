@@ -4,10 +4,9 @@ Rails.application.routes.draw do
   mount Sidekiq::Web => '/sidekiq'
 
   resources :candidates
-  resources :jobs do
-    get :search, on: :collection
-  end
+  resources :jobs
 
+  get '/search', to: 'searches#new', as: 'search'
   get '/unsubscribe/:token', to: 'candidates#unsubscribe', as: 'unsubscribe'
   get '/remove_account/:token', to: 'candidates#destroy', as: 'remove_account'
 

@@ -1,11 +1,12 @@
 @import "bourbon";
-@import "neat";
 @import "bitters/grid-settings";
 @import "bitters/bitters";
+@import "neat";
 @import "header";
 
 h1 {
   margin-bottom: 1em;
+  font-size: 3em;
 }
 
 select {
@@ -20,10 +21,15 @@ select {
   @include span-columns(12);
   margin-bottom: 0.1em;
   text-align: center;
-  font-size: 14em;
-  line-height: 300px;
+  font-size: 18em;
+  line-height: 1.2em;
+  height: 320px;
 
-  span.crb {
+  .font {
+    display: inline;
+  }
+
+  .font.crb {
     color: #C10C21;
     font-weight: bold;
   }
@@ -57,4 +63,8 @@ input[type="checkbox"] + label {
   span.page, span.next, span.last {
     padding: 1em;
   }
+}
+
+table + h2 {
+  margin-top: 3em;
 }

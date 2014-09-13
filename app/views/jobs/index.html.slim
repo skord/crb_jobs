@@ -1,22 +1,2 @@
-table
-  thead
-    tr
-      th Job Title
-      th Company
-      th Location
-      th Position Type
-      th Experience Level
-      th Remote?
-      th Posted
-
-  - @jobs.each do |j|
-    tr
-      td= link_to j.title, job_path(j)
-      td= link_to j.company_name, j.url
-      td= j.location
-      td= j.position_type
-      td= j.experience_level
-      td= boolean_answer(j.remote_potential)
-      td= "#{distance_of_time_in_words(j.created_at, Time.now)} ago"
-
+= render "table"
 = paginate @jobs
