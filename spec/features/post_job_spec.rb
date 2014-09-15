@@ -7,7 +7,7 @@ feature "Posting a Job" do
     fill_in :job_title, with: "Some Title"
     fill_in :job_location, with: "Some Location"
     fill_in :job_company_name, with: "Some Company"
-    fill_in :job_company_url, with: "http://google.com"
+    fill_in :job_url, with: "http://google.com"
     fill_in :job_email, with: "asdf@asdf.com"
     select "Senior", from: :job_experience_level
     select "Full", from: :job_position_type

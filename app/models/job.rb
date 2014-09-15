@@ -6,18 +6,22 @@ class Job < ActiveRecord::Base
   LEVELS         = %w{Entry\ Level Junior Intermediate Senior PM}
   POSITION_TYPES = %W{Full\ Time Part\ Time Apprentice Intern}
 
+  before_save :sanitize_url
   after_commit :send_emails
 
   default_scope { where( is_open: true ) }
 
-  validate :title, :location, :email, :remote_potential, :experience_level,
-    :position_type, presence: true
+  validate :title, :location, :email, :remote_potential, :experience_level, :position_type, presence: true
 
   def should_index?
     is_open
   end
 
   private
+
+  def sanitize_url
+    self.url = "http://#{self.url}" unless self.url =~ /^http/
+  end
 
   def send_emails
     Candidate.emailable.each do |c|
