@@ -1,6 +1,6 @@
 class Notifier < ActionMailer::Base
   helper :application
-  default from: "crbjobs@gmail.com", content_type: "text/html"
+  default from: "crbjobs@gmail.com", content_type: "text/plain"
 
   def job_posted(info)
     @job       = Job.find(info[:job_id])
