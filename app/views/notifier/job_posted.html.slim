@@ -1,7 +1,7 @@
-h1= @job.title
+h1= link_to @job.title, job_url(@job)
 
 #details
-t p
+  p
     label Company
     = link_to @job.company_name, @job.url
   p

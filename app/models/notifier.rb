@@ -6,7 +6,7 @@ class Notifier < ActionMailer::Base
   def job_posted(info)
     @job       = Job.find(info[:job_id])
     @candidate = Candidate.find(info[:candidate_id])
-    mail(to: @candidate.email, subject: 'New CRB Job Posted!')
+    mail to: @candidate.email, subject: 'New CRB Job Posted!'
   end
 
 end
